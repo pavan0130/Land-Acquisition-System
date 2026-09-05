@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-navy-800;
+  }
+  ::selection {
+    @apply bg-saffron-200 text-navy-900;
+  }
+  :focus-visible {
+    outline: 2px solid #e97a1f;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .tricolor-strip {
+    background: linear-gradient(
+      to right,
+      #ff9933 0%, #ff9933 33.33%,
+      #ffffff 33.33%, #ffffff 66.66%,
+      #138808 66.66%, #138808 100%
+    );
+    height: 4px;
+  }
+
+  .gov-card {
+    @apply bg-white border border-navy-100 rounded-md shadow-card;
+  }
+
+  .gov-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-navy-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-saffron-500 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .gov-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-navy-200 bg-white px-4 py-2 text-sm font-semibold text-navy-700 transition-colors hover:bg-navy-50;
+  }
+
+  .gov-btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-saffron-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-saffron-600;
+  }
+
+  .gov-input {
+    @apply w-full rounded-sm border border-navy-200 bg-white px-3 py-2 text-sm text-ink placeholder:text-navy-300 focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500;
+  }
+
+  .gov-label {
+    @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-navy-600;
+  }
+
+  .status-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap;
+  }
+
+  .section-heading {
+    @apply flex items-center gap-2 border-l-4 border-saffron-500 pl-3 text-lg font-bold text-navy-800;
+  }
+
+  .watermark-seal {
+    background-image: radial-gradient(circle at center, rgba(10,32,56,0.035) 0%, transparent 70%);
+  }
+}
