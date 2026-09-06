@@ -1,0 +1,6 @@
+{
+  "name": "InfraLand",
+  "description": "Land Acquisition & Infrastructure Management Portal with GIS Parcel Maps, Statutory Workflow, Compensation, R&R, and AI Maps Grounding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
